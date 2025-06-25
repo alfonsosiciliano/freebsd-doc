@@ -1,0 +1,29 @@
+=== SysctlTui
+
+Link: +
+link:https://gitlab.com/alfix/sysctltui[Project Repository] URL: link:https://gitlab.com/alfix/sysctltui[]
+
+Contact: Alfonso Sabato Siciliano <asiciliano@FreeBSD.org>
+
+SysctlTUI is an interactive text user interface (TUI) utility for exploring and managing kernel parameters on FreeBSD systems via the man:sysctl[3] system call.
+It presents the sysctl Management Information Base (MIB) as a hierarchical, navigable tree, enabling users to:
+
+- Browse detailed metadata for each kernel parameter.
+- Retrieve and display current values.
+- Modify parameters interactively from within the interface.
+
+The UI consists of three panes: a tree view of the MIB hierarchy, a detail pane showing metadata and descriptions, and a value editor.
+Pressing the F1 key opens a help dialog explaining:
+
+- When the MIB is built.
+- When values are retrieved or updated.
+- A link to an online guide for getting started with sysctl, including guidance on interpreting and using the displayed data.
+
+Although still in early development (currently at version 0.0.2), SysctlTUI already offers functionality comparable to tools like package:sysutils/nsysctl[] and package:deskutils/sysctlview[].
+A manual page is included, with layout tips for mimicking the output style of man:sysctl[8] or man:nsysctl[8].
+The ToDo list outlining plans for enhancements like configuration file integration and subtree sorting by names.
+
+SysctlTUI is open source and available via the FreeBSD Ports Collection: package:sysutils/sysctltui[].
+Note: TUIs are a known accessibility issue, as they are not usable with most screen readers.
+Users who access FreeBSD using a screen reader can use the package:sysutils/nsysctl[] package instead.
+It is a command-line utility that provides the same information as SysctlTUI, since both tools use the same underlying kernel interface.
